@@ -216,3 +216,25 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+
+# Keep private source files and raw evidence outside the public repository.
+sources/
+private/
+raw-evidence/
+*.pcap
+*.pcapng
+*.evtx
+*.log
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+~$*
+Thumbs.db
+.DS_Store
+Network_Device_Inventory.xlsx
+Network_Diagram.png
+Security Baseline.md
+
