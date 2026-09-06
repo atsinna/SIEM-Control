@@ -1,45 +1,60 @@
 ## SIEM-Control
 I'll be using security and network principles for this project. I'll be focused on monitoring and detecting anomolies that appear on my network. The scope of this project is to gauge my understanding on SIEM principles and learn in my own environment. 
 
-## Home Network Security Lab
+# Home Network Security Lab
 
-An ongoing project to document a home network, establish a security baseline, and gradually build centralized monitoring and incident-response capabilities.
+An ongoing project to document a home network, establish a security baseline, and build toward centralized monitoring and incident response.
 
-# Current stage
+## Current stage
 
-Foundation: an initial device inventory, network diagram, and Windows security baseline have been documented. Hardening validation and SIEM deployment are upcoming work.
+**Foundation.** An initial inventory, inventory-based topology, and Windows baseline are documented. Hardening validation, SIEM deployment, detection rules, and incident simulations remain planned. These artifacts describe observations; they do not establish that the network is secure.
 
-# Work documented
+## Work documented
 
-Inventoried 17 devices, including two network devices and 15 clients.
+- Inventoried 17 devices: two network devices and 15 clients.
+- Documented wired, 2.4 GHz, and 5 GHz connectivity.
+- Examined established TCP connections and listening services on a Windows workstation.
+- Used service details to identify unfamiliar Intel and Razer services.
+- Identified a VirtualBox host-only interface associated with a TCP listener.
+- Recorded a limited DNS observation and reviewed Windows authentication events.
 
-Created an inventory-based network diagram showing wired and wireless connections.
+## Project artifacts
 
-Documented PowerShell commands for examining established TCP connections and listening services.
+| Artifact | What it demonstrates |
+| --- | --- |
+| [Device inventory (CSV)](inventory/device-inventory-sanitized.csv) / [Excel](inventory/device-inventory-sanitized.xlsx) | Asset roles, OS families, connection types, and potential log availability |
+| [Inventory field definitions](inventory/inventory-fields.md) | Data quality, privacy choices, and validation limits |
+| [Network diagram](diagrams/network-topology-sanitized.png) | Inventory-based relationships and connection groups |
+| [Security baseline](docs/security-baseline.md) | Observations, investigations, and unresolved questions |
+| [Command reference](docs/baseline-command-reference.md) | Repeatable observation and investigation steps |
+| [Service and interface identification](investigations/service-and-interface-identification.md) | How unfamiliar listeners were investigated |
+| [Failed-logon review](investigations/failed-logon-review.md) | Authentication evidence and an explicitly unconfirmed cause |
+| [Roadmap](docs/roadmap.md) | Planned progression from foundation to monitoring and response |
+| [Data sanitization](docs/data-sanitization.md) | What is omitted from public artifacts |
 
-Identified unfamiliar services and a VirtualBox host-only network interface.
+![Sanitized home network topology](diagrams/network-topology-sanitized.png)
 
-Recorded a limited DNS observation and reviewed Windows authentication events.
+## Lessons so far
 
-# What I learned
+Service names and network interfaces need context before they can be classified. Service details explained unfamiliar Intel and Razer processes, and adapter inspection identified the VirtualBox host-only network. A listening port alone did not establish internet exposure. A single failed logon did not establish a confirmed attack or a harmless cause.
 
-Service and interface details helped explain unfamiliar listeners. A listening port alone did not establish internet exposure. Limited traffic snapshots and individual authentication events required further context before drawing security conclusions.
+## Scope and limitations
 
-# Limitations
-
-The baseline covers initial observations rather than continuous monitoring. TCP snapshots do not include UDP endpoints.
-Device trust labels and potential log availability have not been independently validated, and the diagram does not represent VLAN segmentation.
+- The baseline is an initial observation, not continuous monitoring.
+- TCP snapshots do not cover UDP endpoints.
+- The network diagram is inferred from inventory. Connection groups are not VLANs or verified security boundaries.
+- Potential log availability is recorded but collection has not been validated.
+- Device trust has not been independently validated.
+- Current documented tools include PowerShell, Wireshark, Windows Event Viewer, and Windows networking/service inspection. Future tools in the roadmap are not deployed-tool claims.
 
 ## Next steps
 
-Refine the baseline and resolve remaining inventory uncertainties.
+1. Resolve inventory uncertainties and verify the subnet mask privately.
+2. Expand baseline observations and document collection context.
+3. Review and record network and endpoint hardening.
+4. Select one monitoring platform and verify event ingestion.
+5. Build understandable detections and controlled investigation exercises.
 
-Review and document network and endpoint hardening.
+## Privacy
 
-Select and deploy one monitoring platform.
-
-Verify log ingestion before building and testing detections.
-
-# Data handling
-
-Public artifacts use sanitized device identifiers and omit personal ownership details and real MAC addresses. Any illustrative addresses are labeled. Original inventories and raw evidence remain private.
+Device identifiers are aliases. Real IP addresses, MAC addresses, personal ownership details, and raw evidence are omitted. Original records remain outside this public package. See [data sanitization](docs/data-sanitization.md).
