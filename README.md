@@ -25,6 +25,7 @@ An ongoing project to document a home network, establish a security baseline, an
 | [Device inventory (CSV)](inventory/device-inventory-sanitized.csv) / [Excel](inventory/device-inventory-sanitized.xlsx) | Asset roles, OS families, connection types, and potential log availability |
 | [Inventory field definitions](inventory/inventory-fields.md) | Data quality, privacy choices, and validation limits |
 | [Network diagram](diagrams/network-topology-sanitized.png) | Inventory-based relationships and connection groups |
+| [Visual Git](git-diagrams/.png) | Repository architecture diagram |
 | [Security baseline](docs/security-baseline.md) | Observations, investigations, and unresolved questions |
 | [Command reference](docs/baseline-cmd-reference.md) | Repeatable observation and investigation steps |
 | [Service and interface identification](investigations/service-and-interface-identification.md) | How unfamiliar listeners were investigated |
