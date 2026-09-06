@@ -6,7 +6,7 @@ This public inventory retains 17 recorded assets: two network devices and 15 cli
 | --- | --- |
 | Device alias | Generic identifier used consistently in public documentation; not the original hostname |
 | Role | Recorded function; a monitoring role does not prove a monitoring service is deployed |
-| OS family | Recorded operating-system family, including project-owner clarifications |
+| OS family | Recorded operating-systems|
 | Connection type | Recorded link type; Ethernet and Wi-Fi bands are not VLANs |
 | Potential log availability | Available or Limited as recorded in the original inventory; not a tested collection result |
 
