@@ -26,10 +26,10 @@ An ongoing project to document a home network, establish a security baseline, an
 | [Inventory field definitions](inventory/inventory-fields.md) | Data quality, privacy choices, and validation limits |
 | [Network diagram](diagrams/network-topology-sanitized.png) | Inventory-based relationships and connection groups |
 | [Security baseline](docs/security-baseline.md) | Observations, investigations, and unresolved questions |
-| [Command reference](docs/baseline-command-reference.md) | Repeatable observation and investigation steps |
+| [Command reference](docs/baseline-cmd-reference.md) | Repeatable observation and investigation steps |
 | [Service and interface identification](investigations/service-and-interface-identification.md) | How unfamiliar listeners were investigated |
 | [Failed-logon review](investigations/failed-logon-review.md) | Authentication evidence and an explicitly unconfirmed cause |
-| [Roadmap](docs/roadmap.md) | Planned progression from foundation to monitoring and response |
+| [Roadmap](Planning/roadmap.md) | Planned progression from foundation to monitoring and response |
 | [Data sanitization](docs/data-sanitization.md) | What is omitted from public artifacts |
 
 ![Sanitized home network topology](diagrams/network-topology-sanitized.png)
